@@ -1,25 +1,66 @@
-# 🔩 Base V4 Hook
+## Foundry
 
-[![CI][ci-badge]][ci-url]
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Uniswap v4 base hook that implements v4-like liquidity logic.
+Foundry consists of:
 
-> This is **experimental software** and is provided on an "as is" and "as available" basis. We **do not give any warranties** and **will not be liable for any losses** incurred through any use of this code base.
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Installation
+## Documentation
 
-To install with [**Foundry**](https://github.com/foundry-rs/foundry):
+https://book.getfoundry.sh/
 
-```sh
-forge install cairoeth/base-v4-hook
+## Usage
+
+### Build
+
+```shell
+$ forge build
 ```
 
-## Acknowledgements
+### Test
 
-This repository is inspired by or directly modified from many sources, primarily:
+```shell
+$ forge test
+```
 
-- [v4-periphery](https://github.com/Uniswap/v4-periphery)
-- [v4-core](https://github.com/Uniswap/v4-core)
+### Format
 
-[ci-badge]: https://github.com/cairoeth/base-v4-hook/actions/workflows/test.yml/badge.svg
-[ci-url]: https://github.com/cairoeth/base-v4-hook/actions/workflows/test.yml
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
